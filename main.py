@@ -92,9 +92,9 @@ def register():
 
 # Save account information to accounts.txt
 def save_accounts():
-    print("\nUsernames and passwords:")
-    for username, password in accounts.items():
-        print(f'{username}:{password}')
+    with open('accounts.txt', 'a') as f:
+        for username, password in accounts.items():
+            f.write(f'{username}:{password}\n')
 
 
 # Display all account information to user
