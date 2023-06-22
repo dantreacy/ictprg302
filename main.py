@@ -46,6 +46,9 @@ def load_accounts():
             for line in f.readlines():
                 username, password = line.strip().split(' ')
                 accounts[username] = password
+    else:
+        print("\naccounts.txt not present... Exiting!")
+        sys.exit()
 
 
 def login():
