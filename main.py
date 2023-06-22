@@ -19,7 +19,7 @@ def main():
     load_accounts()
     while True:
         # Present menu of options to user
-        print("Please press the indicated key to make your choice\n")
+        print("\nPlease press the indicated key to make your choice\n")
         print("(L)ogin\n(R)egister\n(V)iew accounts\n(E)xit")
         choice = input("Choose an option: ")
         if choice.lower() == 'l':
@@ -46,6 +46,7 @@ def load_accounts():
             for line in f.readlines():
                 username, password = line.strip().split(' ')
                 accounts[username] = password
+
 
 def login():
     username = input("Enter your username: ")
@@ -99,14 +100,9 @@ def save_accounts():
 
 # Display all account information to user
 def view_accounts():
-    print("\nUsernames and passwords:")
+    print("\nUsernames and passwords:\n")
     for username, password in accounts.items():
         print(f'{username} {password}')
-
-
-# Add initial data to accounts.txt if it doesn't exist
-def seed_accounts_txt():
-    pass
 
 
 # Program Start
