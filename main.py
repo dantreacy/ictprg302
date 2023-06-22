@@ -36,7 +36,7 @@ def main():
             print('Out!')
             break
         else:
-            print("Invalid option!")
+            print("\nInvalid option!")
 
 
 # Load accounts.txt from disk
