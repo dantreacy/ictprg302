@@ -29,7 +29,7 @@ def main():
         elif choice.lower() == 'v':
             view_accounts()
         elif choice.lower() == 'e':
-            print("Exiting the program...")
+            print("\nExiting the program...")
             time.sleep(1)
             print("Peace...")
             time.sleep(1)
