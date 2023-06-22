@@ -44,7 +44,7 @@ def load_accounts():
     if os.path.isfile('accounts.txt'):
         with open('accounts.txt', 'r') as f:
             for line in f.readlines():
-                username, password = line.strip().split(':')
+                username, password = line.strip().split(' ')
                 accounts[username] = password
 
 def login():
@@ -94,14 +94,14 @@ def register():
 def save_accounts():
     with open('accounts.txt', 'a') as f:
         for username, password in accounts.items():
-            f.write(f'{username}:{password}\n')
+            f.write(f'{username} {password}\n')
 
 
 # Display all account information to user
 def view_accounts():
     print("\nUsernames and passwords:")
     for username, password in accounts.items():
-        print(f'{username}:{password}')
+        print(f'{username} {password}')
 
 
 # Add initial data to accounts.txt if it doesn't exist
