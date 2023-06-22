@@ -52,6 +52,7 @@ def load_accounts():
 
 
 def login():
+    print("\nLogin\n")
     username = input("Enter your username: ")
     password = input("Enter your password: ")
     # Check if the entered username and password match an account in the 'accounts' dictionary
@@ -63,6 +64,7 @@ def login():
 
 # Register a new user
 def register():
+    print("\nRegister\n")
     username = input("Enter a username: ")
     # Check if the username is already taken
     if username in accounts:
