@@ -20,7 +20,7 @@ def main():
     while True:
         # Present menu of options to user
         print("\nPlease press the indicated key to make your choice\n")
-        print("(L)ogin\n(R)egister\n(V)iew accounts\n(E)xit")
+        print("(L)ogin\n(R)egister\n(E)xit")
         choice = input("Choose an option: ")
         if choice.lower() == 'l':
             login()
